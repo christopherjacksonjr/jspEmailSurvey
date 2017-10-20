@@ -8,6 +8,7 @@ package murach.business;
 
 import java.io.Serializable;
 
+//Initializing User objects with parameters I will collect from the HTML index page
 public class User implements Serializable {
 
     private String firstName;
@@ -23,6 +24,7 @@ public class User implements Serializable {
         email = "";
     }
 
+    //Getter and setter methods for each String in the user object
     public String getFirstName() {
         return firstName;
     }

@@ -9,13 +9,16 @@
     <head>
         <meta charset="utf-8">
         <title>Murach's Java Servlets and JSP</title>
+        <!-- Reference to the external stylesheet main.css -->
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
+        <!-- form is being sent to survey servlet to process user input -->
         <form action="survey" method="post">
             <h1>Survey</h1>
             <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
             
+            <!-- here the user is prompted to enter some information -->
             <h2>Your information:</h2>
             <label class="pad_top">First Name</label>
             <input type="text" name="firstName" required><br>
@@ -24,14 +27,17 @@
             <label class="pad_top">Email</label>
             <input type="email" name="email" required><br>
 
+            <!-- here the user has to choose a radio button to indicate how they heard of the company -->
             <h2>How did you hear about us?</h2>
             <p><input type=radio name="heardFrom" value="Search Engine">Search engine
                <input type=radio name="heardFrom" value="Friend">Word of mouth
                <input type=radio name="heardFrom" value="Other">Other</p>
-
+            
+            <!-- a checkbox that the user may check to receive updates or leave blank to not receive updates -->
             <h2>Would you like to receive announcements about new CDs and special offers?</h2>
             <p><input type="checkbox" name="wantsUpdates" checked>YES, I'd like that.</p>
 
+            <!-- selection for the way the user would like to receive their updates -->
             <p>Please contact me by:
                 <select name="contactVia">
                     <option value="Both" selected>Email or postal mail</option>
@@ -39,7 +45,7 @@
                     <option value="Postal Mail">Postal mail only</option>
                 </select>
             </p>
-
+            <!-- submitting to servlet -->
             <input type="submit" value="Submit">
         </form>
     </body>
